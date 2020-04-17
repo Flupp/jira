@@ -146,7 +146,7 @@ class ResilientSession(Session):
                     return response
             except ConnectionError as e:
                 logging.warning(
-                    "%s while doing %s %s [%s]" % (e, verb.upper(), url, kwargs)
+                    "%s while doing %s %s" % (e, verb.upper(), url)
                 )
                 exception = e
             retry_number += 1
